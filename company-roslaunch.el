@@ -51,3 +51,5 @@
 (defun company-roslaunch-find-current-catkin-workspace ()
   (interactive)
   (message (company-roslaunch--recursively-up-find-file (spacemacs--file-path) ".catkin_workspace")))
+
+(provide 'company-roslaunch)
