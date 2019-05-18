@@ -6,6 +6,9 @@
     (dolist (element file-list new-list)
       (setq new-list (cons (concat prefix element) new-list)))))
 
+(defun company-roslaunch--replace-in-string (pattern replacement original-text)
+  (replace-regexp-in-string pattern replacement original-text nil 'literal))
+
 (defun company-roslaunch--get-rospack-absolute-path (rospack-find-str)
   (let* ((pkg-path (company-roslaunch--replace-in-string "find" "rospack find" rospack-find-str))
          (absolute-path (shell-command-to-string (concat "/bin/echo -n " pkg-path)))
