@@ -1,3 +1,5 @@
+;;; company-roslaunch.el --- path autocompletion for $(find pkg-name)/... in roslaunch file.  -*- lexical-binding: t; -*-
+
 ;; Path autocompletion for $(find pkg-name)/...
 (require 'company)
 
