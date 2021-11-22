@@ -28,7 +28,7 @@
 
 (defun company-roslaunch-company-rospack-find-backend (command &optional arg &rest ignored)
   (interactive (list 'interactive))
-  (case command
+  (cl-case command
     (interactive (company-begin-backend 'company-roslaunch-company-rospack-find-backend))
     ; TODO: replace looking-back with more efficient methods
     (prefix (and (eq major-mode 'nxml-mode)
